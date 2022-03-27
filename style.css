@@ -20,18 +20,24 @@
   list-style-type: none;
   display: flex;
   color: var(--white);
-  font-size: 1.2em;
+  font-size: 1.2vw;
 }
 .menu-item {
   margin-right: 30px;
 }
 .details {
-  background-image: url("./images/pngtree-abstract-playful-portfolio-pink-memphis-image_593415.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw;
   display: flex;
   justify-content: space-around;
   padding: 50px 100px;
+  flex-wrap: wrap;
+}
+.details img{
+  width: 48%;
+  flex: 50%;
+}
+.details-text{
+  width: 48%;
+  flex: 0.5 0.5 48% ;
 }
 .details-text h2 {
   font-size: 5em;
@@ -84,13 +90,12 @@
   padding: 3vw 6vw;
 }
 .projects {
-  /* background-color: blueviolet; */
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
 }
 .single-proj {
-  width: 20vw;
+  width: 20vW;
   height: 350px;
   padding: 2vw 1vw;
   border: 2px solid var(--white);
@@ -98,6 +103,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.single-proj img{
+  width:70%;
 }
 .single-proj:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 white;
@@ -112,4 +120,74 @@
   color: var(--white);
   padding: 2% 4%;
   border-radius: 5px;
+}
+/*//////////////  MEDIA QUERIES  //////////////*/
+
+@media only screen and (max-width: 1250px) {
+.menu {
+  font-size: 1.5vw;
+}
+.projects{
+  display: flex;
+  
+}
+.single-proj{
+  flex-wrap: wrap;
+  flex: 1 1 7vw;
+}
+}
+@media only screen and (max-width: 1450px) {
+.single-proj {
+  height: 300px;
+}
+}
+@media only screen and (max-width: 1050px) {
+.details img{
+  display: none;
+}
+.details-text h2 {
+  font-size: 5vw;
+  text-align: center;
+}
+.details-text p {
+  font-size: 3vw;
+  text-align: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+}
+@media only screen and (max-width: 850px) {
+.menu {
+  font-size: 2vw;
+}
+.details-head {
+  font-size: 1.8rem;
+}
+.details-desc {
+  font-size: 1.3rem;
+}
+.button button{
+  font-size: 0.8rem;
+}
+}
+@media only screen and (max-width: 600px) {
+
+.details-head {
+  font-size: 1.6rem;
+}
+.details-desc {
+  font-size: 1.1rem;
+}
+.edu-heading{
+  text-align: center;
+}
+.academic img {
+  width: 25%;
+}
+.button button{
+  font-size: 0.6em;
+}
 }
